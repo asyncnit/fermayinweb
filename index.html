@@ -16,10 +16,37 @@
             color: #4B0082; /* Dark purple color */
             font-size: 2rem;
             font-weight: bold;
+            overflow: hidden;
+            position: relative;
+        }
+        .ball {
+            width: 50px;
+            height: 50px;
+            background-color: #4B0082; /* Dark Purple */
+            border-radius: 50%;
+            position: absolute;
+            bottom: 0;
+            left: -50px;
+            animation: bounce 8s ease-out infinite;
+        }
+        
+        @keyframes bounce {
+            0% { transform: translateX(-50px) translateY(0); }
+            10% { transform: translateX(150px) translateY(-150px); }
+            20% { transform: translateX(300px) translateY(0); }
+            30% { transform: translateX(450px) translateY(-120px); }
+            40% { transform: translateX(600px) translateY(0); }
+            50% { transform: translateX(750px) translateY(-90px); }
+            60% { transform: translateX(900px) translateY(0); }
+            70% { transform: translateX(1050px) translateY(-60px); }
+            80% { transform: translateX(1200px) translateY(0); }
+            90% { transform: translateX(1350px) translateY(-30px); }
+            100% { transform: translateX(1500px) translateY(0); }
         }
     </style>
 </head>
 <body>
+    <div class="ball"></div>
     FERMAYIN LLC
 </body>
 </html>
